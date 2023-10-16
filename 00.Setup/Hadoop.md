@@ -51,7 +51,7 @@ xml 파일들은 etc/hadoop 내애 존재함
 mkdir -p hadoop-3.3.2/dfs/data
 mkdir -p hadoop-3.3.2/dfs/name
 ```
-- hdfs-site.xml
+- hdfs-site.xml ( 생성한 Namenode, Datanode 절대경로 입력 필요 )
 ```
 <configuration>
     <property>
@@ -60,11 +60,11 @@ mkdir -p hadoop-3.3.2/dfs/name
     </property>
     <property>
         <name>dfs.namenode.name.dir</name>
-        <value>/home/fastcampus/hadoop-3.3.2/dfs/name</value>
+        <value>{경로}/hadoop-3.3.2/dfs/name</value>
     </property>
     <property>
         <name>dfs.datanode.data.dir</name>
-        <value>/home/fastcampus/hadoop-3.3.2/dfs/data</value>
+        <value>{경로}/hadoop-3.3.2/dfs/data</value>
     </property>
 </configuration>
 ```
